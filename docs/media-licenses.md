@@ -23,6 +23,18 @@ O Wikimedia retornou 403 no túnel do proxy, impedindo a consulta direta às pá
 
 A licença foi conferida nos metadados desses espelhos; a confirmação direta no Commons permanece pendente. Essa distinção evita apresentar uma consulta à origem como realizada. As atribuições são também exibidas pelo botão “Créditos de imagens” no rodapé.
 
+## Capturas do sistema
+
+Os arquivos PNG em `docs/screenshots/` foram capturados do site em execução no Chromium em 8 de outubro de 2026. A versão desktop usa largura de 1440 pixels; a altura varia para enquadrar cada seção. A versão para celular usa viewport de 390 × 844 pixels com emulação de toque. A preferência de movimento reduzido foi ativada para registrar telas estáveis. As capturas mostram a interface real, incluindo a seleção de Quéops no mapa e da aba “O trabalho”; não são imagens geradas ou montagens.
+
+| Capturas | Fotografias incorporadas e licenças |
+| --- | --- |
+| `01-abertura-desktop.png`, `03-painel-historico.png`, `06-abertura-celular.png` | **All Gizah Pyramids**, Ricardo Liberato — [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), com as origens e a proveniência descritas acima. |
+| `04-esfinge.png` | **Egypt.Giza.Sphinx**, Hamish2k, 2005 — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), com as origens e a proveniência descritas acima. |
+| `02-mapa-interativo.png`, `05-engenharia.png` | Interface e diagramas próprios, sob a licença MIT do projeto. |
+
+As fotografias aparecem enquadradas com a interface, textos e tratamento visual do site, e são reproduzidas em PNG nas capturas. Suas adaptações conservam as respectivas licenças CC BY-SA; a licença MIT da interface não substitui essas condições.
+
 ## Fontes tipográficas
 
 Cormorant Garamond (regular, itálico e semibold) e Inter (regular, medium e semibold), obtidas dos pacotes oficiais `@fontsource/cormorant-garamond@5.3.0` e `@fontsource/inter@5.3.0`, com arquivos WOFF2 locais. A integridade SHA-512 dos arquivos de pacote foi verificada. Subconjunto latino com os caracteres do português.

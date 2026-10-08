@@ -4,6 +4,48 @@
 
 Uma exposição digital em português brasileiro dedicada às pirâmides, à Grande Esfinge e às pessoas que transformaram o planalto de Gizé. Fotografia documental, cartografia interativa e narrativa por rolagem conectam cinco atos: deserto, planalto, guardiã, engenharia e legado.
 
+## Amostra do sistema
+
+Capturas reais do site em execução no navegador, mostrando a apresentação, a exploração interativa e a versão para celular. As imagens podem ser abertas para visualizar os detalhes.
+
+### Abertura da exposição
+
+Fotografia das pirâmides, navegação e acesso à exploração do complexo.
+
+![Tela inicial do GIZA no desktop, com as pirâmides ao fundo, título da exposição e botão Iniciar exploração](docs/screenshots/01-abertura-desktop.png)
+
+### Mapa interativo do planalto
+
+Oito lugares para explorar, com marcadores, lista de monumentos e controles de zoom.
+
+![Mapa do planalto de Gizé com oito pontos numerados, lista de lugares e controles de zoom](docs/screenshots/02-mapa-interativo.png)
+
+### Exploração em ação
+
+Ao selecionar Quéops no mapa, o sistema abre um painel com fotografia, informações históricas e dados do monumento.
+
+![Mapa com o ponto de Quéops selecionado e painel histórico da Grande Pirâmide aberto](docs/screenshots/03-painel-historico.png)
+
+### A Grande Esfinge
+
+Fotografia com quatro pontos de interesse para explorar a cabeça, o corpo, as patas e a Estela do Sonho.
+
+![Tela da Esfinge com fotografia, legenda e quatro pontos de interesse interativos](docs/screenshots/04-esfinge.png)
+
+### Engenharia e construção
+
+Diagrama das pirâmides e conteúdo da aba **O trabalho**, selecionada durante a captura.
+
+![Seção de engenharia com diagrama das três pirâmides, dimensões aproximadas e aba O trabalho selecionada](docs/screenshots/05-engenharia.png)
+
+### Versão para celular
+
+Abertura adaptada à tela menor, com menu móvel e botão de exploração.
+
+<img src="docs/screenshots/06-abertura-celular.png" alt="Tela inicial do GIZA na versão para celular, com menu móvel, título e botão Iniciar exploração" width="390" />
+
+Fotografias presentes nas capturas: Ricardo Liberato — [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) — e Hamish2k — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Consulte os [créditos, origens e condições de uso](docs/media-licenses.md#capturas-do-sistema).
+
 ## Funcionalidades
 
 - Hero fotográfico com tipografia editorial, zoom cinematográfico e transição por rolagem.
