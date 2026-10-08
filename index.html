@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3eddf" />
+    <meta
+      name="description"
+      content="Explore as pirâmides, a Esfinge e a engenharia do planalto de Gizé em uma exposição digital interativa e historicamente responsável."
+    />
+    <title>GIZA — The Eternal Monuments</title>
+    <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/cormorant-garamond-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/images/giza-hero.webp"
+      as="image"
+      imagesrcset="assets/images/giza-hero-640.webp 640w, assets/images/giza-hero.webp 1280w"
+      imagesizes="(max-width: 760px) 150vh, 100vw"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/vendor/lucide.min.js" defer></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#complexo"
+      >Pular abertura e explorar o complexo</a
+    >
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#inicio" aria-label="GIZA, voltar ao início"
+        ><svg viewBox="0 0 40 26" aria-hidden="true">
+          <path d="M1 24 14 3l13 21M20 24 30 9l9 15M14 3v21" /></svg
+        ><span
+          >GIZA<span class="brand-sub">THE ETERNAL MONUMENTS</span></span
+        ></a
+      >
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#inicio" aria-current="location">Início</a
+        ><a href="#complexo">O Complexo</a><a href="#esfinge">A Esfinge</a
+        ><a href="#engenharia">Engenharia</a><a href="#historia">História</a>
+      </nav>
+      <span class="header-coordinate">29°58′ N · 31°08′ E</span>
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Navegação móvel"
+        hidden
+      >
+        <a href="#inicio">Início</a><a href="#complexo">O Complexo</a
+        ><a href="#esfinge">A Esfinge</a><a href="#engenharia">Engenharia</a
+        ><a href="#historia">História</a>
+      </nav>
+      <div
+        id="reading-progress"
+        role="progressbar"
+        aria-label="Progresso de leitura"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      ></div>
+    </header>
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-heading">
+        <div class="hero-background">
+          <img
+            src="assets/images/giza-hero.webp"
+            srcset="
+              assets/images/giza-hero-640.webp  640w,
+              assets/images/giza-hero.webp     1280w
+            "
+            sizes="(max-width: 760px) 150vh, 100vw"
+            alt="As três grandes pirâmides de Gizé vistas do deserto, com o horizonte ao fundo"
+            width="1280"
+            height="851"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow">
+            <span class="small-star">✧</span> UMA EXPOSIÇÃO ALÉM DO TEMPO
+          </p>
+          <h1 class="hero-title" id="hero-heading">
+            <span class="hero-line hero-word">GIZA</span
+            ><span class="hero-line hero-kicker">THE ETERNAL MONUMENTS</span>
+          </h1>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-copy">
+            <p>
+              4.500 anos de história.<br /><em
+                >Uma experiência além do tempo.</em
+              >
+            </p>
+            <a class="explore-link" href="#complexo"
+              >INICIAR EXPLORAÇÃO
+              <span class="round-arrow"
+                ><i data-lucide="arrow-down-right"></i></span
+            ></a>
+          </div>
+          <a class="scroll-cue" href="#prologo"
+            ><span class="vertical-line"></span
+            ><span>ROLE PARA EXPLORAR</span></a
+          >
+          <div class="hero-location">
+            <span>PLANALTO DE GIZÉ</span>
+            <p>Egito, África</p>
+            <span class="location-rule"></span
+            ><span>IV DINASTIA · ANTIGO IMPÉRIO</span>
+          </div>
+        </div>
+        <span class="hero-frame-number">01 / 05</span>
+      </section>
+      <section
+        class="prologue section-pad"
+        id="prologo"
+        aria-labelledby="prologue-heading"
+      >
+        <div class="section-index scene-reveal">
+          <span>O DESERTO ETERNO</span><span>UMA JORNADA EM CINCO ATOS</span>
+        </div>
+        <div class="prologue-layout">
+          <h2 id="prologue-heading" class="display-title scene-reveal">
+            O tempo passou.<br /><em>Gizé permaneceu.</em>
+          </h2>
+          <div class="prologue-copy scene-reveal">
+            <span class="small-star ink-star">✧</span>
+            <p>
+              Na margem ocidental do Nilo, uma civilização transformou pedra,
+              conhecimento e trabalho em uma paisagem que atravessa milênios.
+            </p>
+            <p>
+              Esta é uma jornada pelos monumentos — e pelas pessoas — que
+              construíram para a eternidade.
+            </p>
+          </div>
+        </div>
+        <div class="prologue-stats scene-reveal">
+          <div>
+            <span class="stat-number">4.500</span
+            ><span>ANOS DE HISTÓRIA, APROXIMADAMENTE</span>
+          </div>
+          <div>
+            <span class="stat-number">03</span
+            ><span>GRANDES COMPLEXOS PIRAMIDAIS</span>
+          </div>
+          <div>
+            <span class="stat-number">01</span
+            ><span>LEGADO QUE ATRAVESSA O TEMPO</span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="complex-section section-pad"
+        id="complexo"
+        aria-labelledby="complex-heading"
+      >
+        <div class="section-index scene-reveal">
+          <span>ATO II — O PLANALTO</span><span>29°58′ N · 31°08′ E</span>
+        </div>
+        <div class="section-heading">
+          <h2 class="display-title scene-reveal" id="complex-heading">
+            Três pirâmides.<br /><em>Milhares de histórias.</em>
+          </h2>
+          <div class="section-intro scene-reveal">
+            <p>
+              Uma paisagem planejada para a vida após a morte. Explore os
+              monumentos, os caminhos e os vestígios de quem tornou tudo isso
+              possível.
+            </p>
+            <span class="micro-label"
+              ><i data-lucide="mouse-pointer-2"></i> SELECIONE UM DOS OITO
+              PONTOS</span
+            >
+          </div>
+        </div>
+        <div
+          class="map-stage"
+          id="giza-map"
+          aria-label="Mapa interativo do planalto de Gizé"
+        >
+          <p class="map-loading">Preparando o mapa arqueológico…</p>
+        </div>
+        <noscript
+          ><p>
+            A exploração interativa precisa de JavaScript. As pirâmides de
+            Quéops, Quéfren e Miquerinos estendem-se de nordeste a sudoeste. A
+            Esfinge está a leste da pirâmide de Quéfren; Heit el-Ghurab fica ao
+            sul da Esfinge.
+          </p></noscript
+        >
+      </section>
+      <section
+        class="sphinx-section"
+        id="esfinge"
+        aria-labelledby="sphinx-heading"
+      >
+        <div class="section-pad sphinx-heading-wrap">
+          <div class="section-index scene-reveal">
+            <span>ATO III — A GUARDIÃ</span
+            ><span>ESCULPIDA NO PRÓPRIO PLANALTO</span>
+          </div>
+          <div class="section-heading">
+            <h2 class="display-title scene-reveal" id="sphinx-heading">
+              A guardiã<br /><em>do horizonte.</em>
+            </h2>
+            <p class="section-intro scene-reveal">
+              Corpo de leão. Cabeça humana.<br />Um encontro entre a força da
+              natureza e o poder real.
+            </p>
+          </div>
+        </div>
+        <div class="sphinx-stage">
+          <figure class="sphinx-figure">
+            <div class="sphinx-image-layer">
+              <img
+                class="sphinx-image"
+                src="assets/images/sphinx.webp"
+                srcset="
+                  assets/images/sphinx-640.webp   640w,
+                  assets/images/sphinx-1000.webp 1000w,
+                  assets/images/sphinx.webp      1700w
+                "
+                sizes="88vw"
+                alt="A Grande Esfinge de Gizé, com seu corpo de leão e cabeça humana esculpidos em calcário"
+                width="1700"
+                height="1275"
+                loading="lazy"
+              />
+              <figcaption>
+                GRANDE ESFINGE · MONUMENTO ESCULPIDO NO SUBSTRATO ROCHOSO
+              </figcaption>
+              <div
+                class="sphinx-hotspots"
+                aria-label="Detalhes interativos da Esfinge"
+              >
+                <button
+                  class="hotspot hotspot-head"
+                  data-hotspot="cabeca"
+                  aria-label="Explorar a cabeça da Esfinge"
+                  aria-haspopup="dialog"
+                >
+                  <span>01</span></button
+                ><button
+                  class="hotspot hotspot-body"
+                  data-hotspot="corpo"
+                  aria-label="Explorar o corpo da Esfinge"
+                  aria-haspopup="dialog"
+                >
+                  <span>02</span></button
+                ><button
+                  class="hotspot hotspot-paws"
+                  data-hotspot="patas"
+                  aria-label="Explorar as patas da Esfinge"
+                  aria-haspopup="dialog"
+                >
+                  <span>03</span></button
+                ><button
+                  class="hotspot hotspot-stele"
+                  data-hotspot="estela"
+                  aria-label="Conhecer a Estela do Sonho"
+                  aria-haspopup="dialog"
+                >
+                  <span>04</span>
+                </button>
+              </div>
+            </div>
+          </figure>
+          <div class="sphinx-caption">
+            <span class="eyebrow">UM OLHAR PARA A ETERNIDADE</span>
+            <p>Entre a pedra<br />e o <em>silêncio.</em></p>
+          </div>
+        </div>
+        <div class="sphinx-details section-pad">
+          <div class="sphinx-facts">
+            <article class="fact">
+              <span class="fact-number">01</span>
+              <h3>Sua origem</h3>
+              <p>
+                A evidência arqueológica associa o monumento ao reinado de
+                Quéfren, na IV Dinastia. A atribuição resulta do contexto do
+                complexo.
+              </p>
+            </article>
+            <article class="fact">
+              <span class="fact-number">02</span>
+              <h3>Sua estrutura</h3>
+              <p>
+                O corpo foi talhado no calcário do planalto. Camadas de rocha
+                com resistências diferentes respondem de formas distintas à
+                erosão.
+              </p>
+            </article>
+            <article class="fact">
+              <span class="fact-number">03</span>
+              <h3>Seu simbolismo</h3>
+              <p>
+                O corpo de leão e a cabeça humana exprimem a força e a
+                autoridade do rei. O olhar se dirige ao horizonte oriental.
+              </p>
+            </article>
+            <article class="fact">
+              <span class="fact-number">04</span>
+              <h3>Sua permanência</h3>
+              <p>
+                Areia, erosão e restaurações fazem parte de sua história. A
+                conservação procura preservar um monumento continuamente
+                exposto.
+              </p>
+            </article>
+          </div>
+          <p class="small-note">
+            Toque nos pontos da fotografia ou use Tab e Enter para explorar os
+            detalhes. As posições são indicativas; a Estela do Sonho fica entre
+            as patas dianteiras.
+          </p>
+        </div>
+      </section>
+      <section
+        class="engineering-section section-pad"
+        id="engenharia"
+        aria-labelledby="engineering-heading"
+      >
+        <div class="section-index scene-reveal">
+          <span>ATO IV — A ENGENHARIA DA ETERNIDADE</span
+          ><span>CONHECIMENTO TRANSFORMADO EM PEDRA</span>
+        </div>
+        <h2 class="display-title scene-reveal" id="engineering-heading">
+          Precisão<br /><em>além do tempo.</em>
+        </h2>
+        <div class="engineering-layout">
+          <div class="engineering-visual">
+            <div class="diagram-top">
+              <span class="micro-label">O PLANALTO, VISTO DE CIMA</span
+              ><button
+                class="text-button"
+                id="orion-toggle"
+                aria-pressed="false"
+                aria-controls="orion-comparison"
+              >
+                <i data-lucide="sparkles"></i><span>Observar Órion</span>
+              </button>
+            </div>
+            <svg
+              class="engineering-diagram"
+              viewBox="0 0 620 620"
+              role="img"
+              aria-labelledby="diagram-title diagram-desc"
+            >
+              <title id="diagram-title">Geometria das três pirâmides</title>
+              <desc id="diagram-desc">
+                Esquema orientado ao norte. Quéops fica a nordeste, Quéfren no
+                centro e Miquerinos a sudoeste. As bases quadradas acompanham os
+                pontos cardeais. Não é um levantamento topográfico.
+              </desc>
+              <defs>
+                <pattern
+                  id="technical-grid"
+                  width="31"
+                  height="31"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M31 0H0V31"
+                    fill="none"
+                    stroke="#c7aa75"
+                    stroke-opacity=".12"
+                    stroke-width=".5"
+                  />
+                </pattern>
+                <radialGradient id="diagram-glow">
+                  <stop stop-color="#a3733e" stop-opacity=".12" />
+                  <stop offset="1" stop-color="#a3733e" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="620" height="620" fill="url(#technical-grid)" />
+              <circle cx="310" cy="310" r="260" fill="url(#diagram-glow)" />
+              <g fill="none" stroke="#bfa77b" stroke-width=".8">
+                <circle
+                  class="geometry-line"
+                  cx="310"
+                  cy="310"
+                  r="255"
+                  opacity=".4"
+                />
+                <path
+                  class="geometry-line"
+                  d="M310 10V610M10 310H610"
+                  opacity=".4"
+                />
+                <path
+                  class="geometry-line"
+                  d="M92 510 310 310 456 148"
+                  stroke-dasharray="3 7"
+                  opacity=".5"
+                />
+              </g>
+              <g
+                class="pyramid-outline"
+                stroke="#ddc59c"
+                fill="#b28e57"
+                fill-opacity=".06"
+              >
+                <path
+                  d="M372 82H529V239H372Z M372 82 450 160 529 82 M372 239 450 160 529 239 M450 160V82"
+                />
+                <path
+                  d="M212 263H360V411H212Z M212 263 286 337 360 263 M212 411 286 337 360 411"
+                />
+                <path
+                  d="M101 460H177V536H101Z M101 460 139 498 177 460 M101 536 139 498 177 536"
+                />
+              </g>
+              <g class="geometry-line" fill="none" stroke="#ddc59c">
+                <path d="M372 58H529M372 51V65M529 51V65" />
+                <path d="M554 82V239M547 82H561M547 239H561" />
+              </g>
+              <g
+                fill="#ddc59c"
+                font-family="Inter, sans-serif"
+                font-size="10"
+                letter-spacing="2"
+              >
+                <text x="408" y="43">≈ 230 M</text>
+                <text x="380" y="264">QUÉOPS</text>
+                <text x="218" y="436">QUÉFREN</text>
+                <text x="104" y="561">MIQUERINOS</text>
+                <text x="306" y="28">N</text>
+                <text x="306" y="601">S</text>
+                <text x="592" y="314">L</text>
+                <text x="15" y="314">O</text>
+              </g>
+              <path
+                class="geometry-line"
+                d="M310 36 306 48h8Z"
+                fill="#ddc59c"
+              />
+              <g class="orion-stars" opacity="0">
+                <circle cx="195" cy="145" r="3" />
+                <circle cx="232" cy="160" r="4" />
+                <circle cx="267" cy="179" r="3" />
+                <path
+                  d="M195 145 232 160 267 179"
+                  fill="none"
+                  stroke="#cee0f2"
+                  stroke-dasharray="2 5"
+                />
+                <text x="163" y="124" font-size="10">CINTURÃO DE ÓRION</text>
+              </g>
+            </svg>
+            <p class="diagram-note">
+              ESQUEMA GEOMÉTRICO · NORTE PARA CIMA · SEM ESCALA TOPOGRÁFICA
+            </p>
+            <div class="orion-comparison" id="orion-comparison" hidden>
+              <span class="eyebrow">UMA DISTINÇÃO NECESSÁRIA</span>
+              <p>
+                A orientação das faces para os pontos cardeais é evidência
+                mensurável. A intenção de reproduzir o Cinturão de Órion é uma
+                hipótese contestada, sem comprovação arqueológica.
+              </p>
+              <p class="small-note">
+                Representação artística do céu, sem época astronômica específica
+                e sem afirmar coincidência geométrica.
+              </p>
+            </div>
+          </div>
+          <div class="engineering-copy">
+            <p class="engineering-lead scene-reveal">
+              Quando a engenharia<br />encontrou o <em>infinito.</em>
+            </p>
+            <p class="scene-reveal">
+              Bases quadradas. Faces orientadas aos pontos cardeais. Milhares de
+              trabalhadores e uma logística que conectava pedreiras,
+              assentamentos e rotas de água.
+            </p>
+            <div class="engineering-stats scene-reveal">
+              <div>
+                <span>146,6 <small>m</small></span>
+                <p>ALTURA ORIGINAL APROXIMADA<br />DA GRANDE PIRÂMIDE</p>
+              </div>
+              <div>
+                <span>230 <small>m</small></span>
+                <p>LADO APROXIMADO<br />DA BASE DE QUÉOPS</p>
+              </div>
+            </div>
+            <div
+              class="engineering-tabs"
+              role="tablist"
+              aria-label="Conhecimentos da construção"
+            >
+              <button
+                id="tab-materiais"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-materiais"
+                tabindex="0"
+              >
+                A pedra</button
+              ><button
+                id="tab-logistica"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-logistica"
+                tabindex="-1"
+              >
+                O trabalho</button
+              ><button
+                id="tab-orientacao"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-orientacao"
+                tabindex="-1"
+              >
+                O norte
+              </button>
+            </div>
+            <div class="engineering-tab-content">
+              <div
+                role="tabpanel"
+                id="panel-materiais"
+                aria-labelledby="tab-materiais"
+              >
+                <h3>A matéria da eternidade</h3>
+                <p>
+                  O núcleo utiliza sobretudo calcário local. Calcário fino de
+                  Tura foi empregado no revestimento; granito de Assuã aparece
+                  em espaços internos. Os métodos exatos de elevação dos blocos
+                  continuam em debate.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
+                id="panel-logistica"
+                aria-labelledby="tab-logistica"
+                hidden
+              >
+                <h3>Uma obra coletiva</h3>
+                <p>
+                  Vestígios de Heit el-Ghurab revelam alimentação, alojamento e
+                  administração. Os papiros de Merer documentam o transporte de
+                  calcário de Tura por água durante o reinado de Quéops.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
+                id="panel-orientacao"
+                aria-labelledby="tab-orientacao"
+                hidden
+              >
+                <h3>O horizonte como referência</h3>
+                <p>
+                  A orientação da Grande Pirâmide se aproxima muito dos pontos
+                  cardeais. Métodos solares e estelares foram propostos para
+                  explicar a medição; a técnica específica não está
+                  estabelecida.
+                </p>
+              </div>
+            </div>
+            <a
+              class="source-link"
+              href="https://giza.fas.harvard.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >APROFUNDAR NO DIGITAL GIZA <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="history-section section-pad"
+        id="historia"
+        aria-labelledby="history-heading"
+      >
+        <div class="section-index scene-reveal">
+          <span>ATO V — O LEGADO</span><span>A HISTÓRIA CONTINUA</span>
+        </div>
+        <div class="section-heading">
+          <h2 class="display-title scene-reveal" id="history-heading">
+            Uma civilização.<br /><em>Um legado eterno.</em>
+          </h2>
+          <p class="section-intro scene-reveal">
+            Reis, construtores, pesquisadores.<br />A história de Gizé é também
+            a história de cada geração que procurou compreendê-la.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span><i>c.</i>2550</span><small>A.C. · REINADO DE QUÉOPS</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">QUÉOPS — KHUFU</span>
+              <h3>A grande ambição</h3>
+              <p>
+                O reinado de Quéops dá origem à Grande Pirâmide. O monumento faz
+                parte de um complexo funerário com templos, calçada, pirâmides
+                menores e sepulturas.
+              </p>
+            </div>
+            <div class="timeline-image">
+              <img
+                src="assets/images/giza-hero.webp"
+                alt="Paisagem das pirâmides de Gizé"
+                width="450"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span><i>c.</i>2520</span><small>A.C. · REINADO DE QUÉFREN</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">QUÉFREN — KHAFRE</span>
+              <h3>O horizonte ganha uma guardiã</h3>
+              <p>
+                A segunda grande pirâmide ocupa terreno mais elevado. Seu
+                complexo inclui o templo do vale; o contexto arqueológico
+                associa a Esfinge ao mesmo reinado.
+              </p>
+            </div>
+            <div class="timeline-image">
+              <img
+                src="assets/images/sphinx.webp"
+                alt="A Esfinge, associada ao complexo de Quéfren"
+                width="450"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span><i>c.</i>2490</span
+              ><small>A.C. · REINADO DE MIQUERINOS</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">MIQUERINOS — MENKAURE</span>
+              <h3>A terceira presença</h3>
+              <p>
+                Menor em dimensões, a pirâmide de Miquerinos completa os três
+                grandes complexos. Parte de seu revestimento utiliza granito,
+                distinguindo-a das vizinhas.
+              </p>
+            </div>
+            <div class="timeline-symbol" aria-hidden="true">
+              <svg viewBox="0 0 200 130">
+                <path d="m18 112 82-100 82 100Zm82-100v100m0-100 82 100" />
+              </svg>
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span><i>c.</i>1400</span><small>A.C. · NOVO IMPÉRIO</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">TUTMÉS IV — MEMÓRIA E RESTAURAÇÃO</span>
+              <h3>Despertar sob a areia</h3>
+              <p>
+                Mais de mil anos depois, Tutmés IV celebra a remoção da areia
+                que cobria a Esfinge. A Estela do Sonho, colocada entre suas
+                patas, registra o vínculo do rei com um monumento já antigo.
+              </p>
+            </div>
+            <div class="timeline-image">
+              <img
+                src="assets/images/sphinx.webp"
+                alt="A Esfinge e o espaço entre suas patas, onde se encontra a Estela do Sonho"
+                width="450"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span>1979</span><small>PATRIMÔNIO MUNDIAL</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">PRESERVAR PARA COMPREENDER</span>
+              <h3>Uma herança compartilhada</h3>
+              <p>
+                Gizé integra o sítio “Mênfis e sua Necrópole”, inscrito pela
+                UNESCO em 1979. Levantamentos, conservação e novas pesquisas
+                continuam a ampliar o conhecimento sobre o planalto.
+              </p>
+              <a
+                class="source-link"
+                href="https://whc.unesco.org/en/list/86"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CONHECER O SÍTIO NA UNESCO <i data-lucide="arrow-up-right"></i
+              ></a>
+            </div>
+            <div class="timeline-image">
+              <img
+                src="assets/images/giza-hero.webp"
+                alt="O planalto de Gizé, patrimônio mundial"
+                width="450"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-date">
+              <span>Hoje</span><small>PESQUISA · CONSERVAÇÃO</small>
+            </div>
+            <div class="timeline-content">
+              <span class="eyebrow">UM PASSADO AINDA EM DESCOBERTA</span>
+              <h3>Novas perguntas à pedra</h3>
+              <p>
+                Documentação digital, escavações e conservação conectam
+                registros históricos a novas pesquisas. O Digital Giza reúne
+                acervos e modelos para tornar o conhecimento sobre o planalto
+                acessível.
+              </p>
+              <a
+                class="source-link"
+                href="https://giza.fas.harvard.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >EXPLORAR O ACERVO DIGITAL <i data-lucide="arrow-up-right"></i
+              ></a>
+            </div>
+            <div class="timeline-symbol" aria-hidden="true">
+              <svg viewBox="0 0 200 130">
+                <path
+                  d="m18 112 82-100 82 100ZM100 12v100M18 112H182M100 12 182 112"
+                />
+              </svg>
+            </div>
+          </article>
+        </div>
+        <p class="small-note timeline-note">
+          A construção dos três grandes complexos pertence à IV Dinastia,
+          aproximadamente entre os séculos XXVI e XXV a.C. Os anos são marcos
+          aproximados segundo o Digital Giza; as cronologias de reinados variam
+          entre as fontes.
+        </p>
+      </section>
+      <section class="closing-scene" aria-labelledby="closing-heading">
+        <img
+          src="assets/images/giza-hero.webp"
+          alt="As pirâmides no horizonte do deserto"
+          width="1280"
+          height="851"
+          loading="lazy"
+        />
+        <div class="closing-shade"></div>
+        <div class="closing-content">
+          <span class="eyebrow scene-reveal"
+            >A PEDRA GUARDA. A HISTÓRIA REVELA.</span
+          >
+          <h2 class="scene-reveal" id="closing-heading">
+            O infinito<br />começa no <em>horizonte.</em>
+          </h2>
+          <a href="#inicio" class="explore-link"
+            >VOLTAR AO INÍCIO
+            <span class="round-arrow"><i data-lucide="arrow-up-right"></i></span
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer section-pad">
+      <div class="footer-top">
+        <a class="footer-brand" href="#inicio"
+          >GIZA<span>THE ETERNAL MONUMENTS</span></a
+        >
+        <p>4.500 anos de história.<br />Uma experiência além do tempo.</p>
+        <a href="#inicio" class="back-top" aria-label="Voltar ao início"
+          ><i data-lucide="arrow-up"></i
+        ></a>
+      </div>
+      <div class="footer-sources">
+        <span class="eyebrow">FONTES &amp; CRÉDITOS</span>
+        <div>
+          <a
+            href="https://egymonuments.gov.eg/en/archaeological-sites/giza-plateau/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Antiguidades do Egito <i data-lucide="arrow-up-right"></i></a
+          ><a
+            href="https://giza.fas.harvard.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Harvard · Digital Giza <i data-lucide="arrow-up-right"></i></a
+          ><a
+            href="https://aeraweb.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >AERA <i data-lucide="arrow-up-right"></i></a
+          ><a
+            href="https://whc.unesco.org/en/list/86"
+            target="_blank"
+            rel="noopener noreferrer"
+            >UNESCO <i data-lucide="arrow-up-right"></i></a
+          ><button class="text-button" id="credits-open">
+            Créditos de imagens <i data-lucide="plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>UMA EXPOSIÇÃO DIGITAL INDEPENDENTE · CONTEÚDO EDUCATIVO</span
+        ><span>FEITO PARA EXPLORAR, NÃO PARA ESQUECER.</span>
+      </div>
+    </footer>
+    <dialog
+      class="detail-dialog"
+      id="sphinx-dialog"
+      aria-labelledby="sphinx-dialog-title"
+    >
+      <button class="dialog-close" aria-label="Fechar detalhe da Esfinge">
+        <i data-lucide="x"></i></button
+      ><span class="eyebrow" id="sphinx-dialog-number"></span>
+      <h2 id="sphinx-dialog-title"></h2>
+      <p id="sphinx-dialog-description"></p>
+      <span class="dialog-source"
+        >CONTEXTO ARQUEOLÓGICO · GRANDE ESFINGE DE GIZÉ</span
+      >
+    </dialog>
+    <dialog
+      class="detail-dialog credits-dialog"
+      id="credits-dialog"
+      aria-labelledby="credits-title"
+    >
+      <button class="dialog-close" aria-label="Fechar créditos">
+        <i data-lucide="x"></i></button
+      ><span class="eyebrow">IMAGENS, FONTES &amp; FERRAMENTAS</span>
+      <h2 id="credits-title">Cada imagem,<br /><em>uma origem.</em></h2>
+      <div id="media-credits">
+        <p class="media-credit">
+          <strong>Pirâmides:</strong> “All Gizah Pyramids”, Ricardo Liberato.
+          <a
+            href="https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Wikimedia Commons</a
+          >
+          ·
+          <a
+            href="https://creativecommons.org/licenses/by-sa/2.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CC BY-SA 2.0</a
+          >. Redimensionada, convertida em WebP; enquadramento e tratamento
+          cromático via CSS.
+        </p>
+        <p class="media-credit">
+          <strong>Esfinge:</strong> “Egypt.Giza.Sphinx”, Hamish2k, 2005.
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Egypt.Giza.Sphinx.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Wikimedia Commons</a
+          >
+          ·
+          <a
+            href="https://creativecommons.org/licenses/by-sa/3.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CC BY-SA 3.0</a
+          >. Redimensionada e convertida em WebP.
+        </p>
+        <p>
+          Fotografias e licenças documentadas em
+          <a href="docs/media-licenses.md">docs/media-licenses.md</a>.
+          Referências históricas em
+          <a href="docs/historical-sources.md">docs/historical-sources.md</a>.
+        </p>
+      </div>
+      <p class="small-note">
+        Tipografia: Cormorant Garamond e Inter, SIL Open Font License. Ícones:
+        Lucide, ISC. Movimento: GSAP e ScrollTrigger, Standard License.
+      </p>
+    </dialog>
+  </body>
+</html>
