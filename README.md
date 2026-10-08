@@ -83,7 +83,7 @@ Nas [configurações do GitHub Pages](https://github.com/Helio965/GIZA-The-Etern
 
 Endereço previsto, após a ativação e conclusão da publicação: **https://helio965.github.io/GIZA-The-Eternal-Monuments/**.
 
-A integração dos arquivos à `main` não habilita o Pages automaticamente. A ativação e o acesso público permanecem sem confirmação nesta sessão: o proxy do ambiente bloqueou tanto a API do GitHub quanto o domínio do Pages. Consulte o [registro da preparação e validação](docs/publication.md).
+A `main` contém o projeto completo e a galeria de capturas. A ativação do Pages ainda está pendente: a API confirmou `has_pages: false` e recusou a criação do site com **HTTP 403 — `Resource not accessible by integration`**. A credencial da integração não tem permissão para habilitar Pages. O endereço previsto respondeu com a página 404 “Site not found” do GitHub Pages. Para publicar, habilite a configuração acima usando sua conta no GitHub. Consulte o [registro da integração, preparação e validação](docs/publication.md).
 
 ### Build para outros servidores estáticos
 

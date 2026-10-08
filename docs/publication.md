@@ -6,7 +6,9 @@ Registro de 8 de outubro de 2026.
 
 A branch `codex/giza-cinematic-experience` continha cinco commits após a `main`, sem commits divergentes. O commit da `main` (`851b544`) é ancestral do projeto (`55937c5`). A comparação não identificou arquivos removidos; a licença original permaneceu idêntica. A página pública de Pull Requests mostrava zero abertos e zero fechados.
 
-As mudanças de preparação se limitam a `.nojekyll` e documentação. O design, as fotografias, o mapa, as animações, o código da aplicação e os testes foram preservados. O acesso Git HTTPS está disponível, permitindo integração linear sem force push e mantendo a branch original. A criação de Pull Request não está disponível nesta sessão: a conexão à API do GitHub foi bloqueada pelo proxy antes de chegar à API.
+As mudanças de preparação se limitam a `.nojekyll` e documentação. O design, as fotografias, o mapa, as animações, o código da aplicação e os testes foram preservados.
+
+A integração inicial foi concluída por avanço linear (fast-forward), de `851b544` para `7a2814f`, usando Git HTTPS: naquele momento a API para criar Pull Request estava bloqueada pela rede. A confirmação por `git ls-remote`, novo fetch e página pública do GitHub mostrou a `main` e a branch original no mesmo commit, com `index.html`, `css/`, `js/`, `assets/`, `docs/`, testes e `.nojekyll`. Os cinco commits do projeto e a licença original foram preservados; não houve force push, exclusão de branch nem reescrita de histórico.
 
 ## Validação executada
 
@@ -32,6 +34,10 @@ Endereço previsto após publicação: `https://helio965.github.io/GIZA-The-Eter
 
 ## Limites e pendências externas
 
-As conexões a `api.github.com` e `helio965.github.io` retornaram bloqueio de túnel HTTP CONNECT 403. Esse resultado é uma restrição de rede do ambiente, não uma resposta do website nem prova de que o Pages está ativado ou desativado. A consulta ao GitHub pela interface pública e as operações Git funcionaram.
+As conexões a `api.github.com` e `helio965.github.io` inicialmente retornaram bloqueio de túnel HTTP CONNECT 403. Os dois destinos foram acrescentados ao rascunho de rede, preservando os destinos existentes. Depois, os acessos à API e ao endereço público passaram a funcionar; isso permitiu distinguir o estado real da publicação do bloqueio de transporte inicial.
 
-Os dois destinos foram acrescentados ao rascunho de configuração de rede do ambiente, preservando os destinos existentes. Salvar esse rascunho não aplica os acessos à máquina atual. Sem API acessível, a ativação do Pages exige a ação manual acima; o status de publicação e as interações no endereço público permanecem sem confirmação.
+A consulta autenticada ao repositório confirmou `has_pages: false`. A tentativa de criar Pages com `source.branch: main`, `source.path: /` e `build_type: legacy` foi recusada com **HTTP 403 — `Resource not accessible by integration`**. A permissão administrativa da conta no repositório não amplia os escopos da credencial da integração; a criação de Pages exige permissões que essa credencial não possui.
+
+O endereço público respondeu **HTTP 404** com o título “Site not found · GitHub Pages” e a mensagem “There isn't a GitHub Pages site here”. A API de Actions mostrou zero execuções. Portanto, não há publicação concluída nem teste das interações em um website público: os resultados funcionais acima são locais.
+
+A pendência é habilitar Pages com sua conta em **Settings → Pages → Deploy from a branch → main → /(root) → Save**. Um workflow alternativo não remove a falta de permissão para habilitar Pages. Não foram introduzidas duas estratégias concorrentes nem solicitadas credenciais em texto no chat.
