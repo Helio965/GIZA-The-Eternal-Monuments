@@ -1,0 +1,22 @@
+{
+  "name": "giza-the-eternal-monuments",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Uma exposição digital cinematográfica sobre o planalto de Gizé.",
+  "scripts": {
+    "postinstall": "node scripts/vendor.mjs",
+    "dev": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "start": "npm run dev",
+    "build": "node scripts/build.mjs",
+    "test": "playwright test",
+    "test:desktop": "playwright test --project=desktop"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "lucide": "0.468.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2"
+  }
+}
