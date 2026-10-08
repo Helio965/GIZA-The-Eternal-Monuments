@@ -70,13 +70,28 @@ O servidor HTTP usa a porta **4173**. Os arquivos de fontes e bibliotecas já es
 
 **Não abra o `index.html` por `file://`.** Módulos JavaScript e o carregamento do SVG precisam de um servidor HTTP. A instalação reproduz as bibliotecas locais a partir das versões fixadas no lockfile.
 
-## Build e hospedagem estática
+## Publicação no GitHub Pages
+
+A estratégia deste repositório é publicar os arquivos estáticos da **branch `main`, pasta `/(root)`**. O `index.html` e seus recursos já estão na raiz; o arquivo `.nojekyll` mantém a publicação estática, sem processamento pelo Jekyll. Não há um workflow de build concorrente.
+
+Nas [configurações do GitHub Pages](https://github.com/Helio965/GIZA-The-Eternal-Monuments/settings/pages), selecione:
+
+1. **Source:** `Deploy from a branch`.
+2. **Branch:** `main`.
+3. **Folder:** `/(root)`.
+4. Clique em **Save** e acompanhe a publicação na aba **Actions**.
+
+Endereço previsto, após a ativação e conclusão da publicação: **https://helio965.github.io/GIZA-The-Eternal-Monuments/**.
+
+A integração dos arquivos à `main` não habilita o Pages automaticamente. A ativação e o acesso público permanecem sem confirmação nesta sessão: o proxy do ambiente bloqueou tanto a API do GitHub quanto o domínio do Pages. Consulte o [registro da preparação e validação](docs/publication.md).
+
+### Build para outros servidores estáticos
 
 ```bash
 npm run build
 ```
 
-Publique **o conteúdo de `dist/`**, incluindo os documentos de créditos. Não existe backend nem configuração secreta. Os caminhos são relativos e compatíveis com um subdiretório de projeto em GitHub Pages. GitHub Pages, Netlify, Cloudflare Pages ou qualquer servidor estático podem hospedar esses arquivos. Criar o build não publica o site automaticamente.
+O build continua disponível para outros servidores estáticos: publique **o conteúdo de `dist/`**, incluindo os documentos de créditos. Não existe backend nem configuração secreta. Os caminhos são relativos e compatíveis com subdiretórios. O GitHub Pages deste repositório usa a raiz da `main`, sem depender de versionar `dist/`. Criar o build não publica o site automaticamente.
 
 ## Testes
 

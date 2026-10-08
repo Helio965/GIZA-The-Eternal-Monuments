@@ -23,6 +23,8 @@ Quando GSAP não estiver disponível, o conteúdo e as interações continuam fu
 
 ## Publicação
 
-`npm run build` verifica referências HTML/imports e copia HTML, CSS, JavaScript, assets, documentos e licença para `dist/`. Publicar o conteúdo de `dist/` em qualquer servidor estático. Os caminhos são relativos, inclusive quando a página fica no subdiretório de um projeto do GitHub Pages.
+O GitHub Pages foi preparado para publicar a branch `main`, pasta `/(root)`, usando o `index.html` e os recursos já versionados. O arquivo `.nojekyll` evita o processamento pelo Jekyll. A ativação é feita nas configurações Pages do repositório; não existe workflow de build concorrente.
+
+`npm run build` verifica referências HTML/imports e copia HTML, CSS, JavaScript, assets, documentos e licença para `dist/`, que continua disponível para outros servidores estáticos. Os caminhos são relativos, inclusive quando a página fica no subdiretório de um projeto do GitHub Pages. Consulte [publicação e validação](publication.md) para distinguir os arquivos preparados da ativação e verificação públicas.
 
 Abrir `index.html` via `file://` não é suportado: módulos ES e fetch do SVG exigem HTTP. Para desenvolvimento, `npm run dev` usa o servidor HTTP do Python na porta 4173. O servidor do ambiente de desenvolvimento não é um deploy público.
