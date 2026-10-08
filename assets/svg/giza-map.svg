@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none" role="img" aria-labelledby="map-title map-desc">
+  <title id="map-title">O planalto de Gizé — mapa esquemático</title>
+  <desc id="map-desc">Norte para cima. Quéops está a nordeste, Quéfren ao sudoeste de Quéops e Miquerinos mais ao sudoeste. A Esfinge e os templos do vale ficam a leste de Quéfren. Heit el-Ghurab fica ao sul e sudeste da Esfinge. A área aquática azul é interpretativa, sem margem ou porto precisos.</desc>
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#ece1c9"/><stop offset=".5" stop-color="#f3ecd9"/><stop offset="1" stop-color="#e3d4b7"/></linearGradient>
+    <linearGradient id="water-fade" x1="860" y1="0" x2="1190" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#8caeaf" stop-opacity="0"/><stop offset="1" stop-color="#8caeaf" stop-opacity=".2"/></linearGradient>
+    <pattern id="water-hatch" width="17" height="17" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><path d="M1 0V17" stroke="#648d97" stroke-width="1" opacity=".35"/></pattern>
+    <pattern id="masonry" width="12" height="8" patternUnits="userSpaceOnUse"><path d="M0 0H12M0 8H12M6 0V4M0 4H12M2 4V8" stroke="#795c38" stroke-opacity=".16" stroke-width=".7"/></pattern>
+    <pattern id="grain" width="27" height="23" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".65" fill="#947951" opacity=".15"/><circle cx="19" cy="15" r=".5" fill="#947951" opacity=".12"/><path d="M11 9h3M22 3h2" stroke="#947951" opacity=".1"/></pattern>
+    <filter id="pyramid-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="8" dy="11" stdDeviation="4" flood-color="#705939" flood-opacity=".15"/></filter>
+    <symbol id="small-tomb" viewBox="0 0 12 8"><rect x=".5" y=".5" width="11" height="7" fill="#c1aa85" stroke="#947953" stroke-width="1"/><path d="M2 2h8M2 4h8" stroke="#e2d3b5" stroke-width="1"/></symbol>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sand)"/>
+  <rect width="1200" height="900" fill="url(#grain)"/>
+  <!-- Contours are artistic terrain cues, not measured elevation isolines. -->
+  <g stroke="#aa946e" stroke-width="1" opacity=".25">
+    <path d="M-40 202C102 125 146 137 242 101S404 41 564 68 755 2 861-20"/>
+    <path d="M-50 225C111 158 156 153 253 125S418 73 557 91 751 40 872 9"/>
+    <path d="M-32 263C75 200 181 191 277 157S398 115 511 131"/>
+    <path d="M-31 499C129 441 111 339 246 305S345 196 485 203"/>
+    <path d="M-20 532C137 472 146 370 266 329S392 250 500 240"/>
+    <path d="M-10 565C165 489 176 388 280 365S402 280 509 272"/>
+    <path d="M-33 789C72 745 142 717 199 715S331 720 405 696 496 625 523 570 670 542 728 503"/>
+    <path d="M-11 822C89 777 157 750 217 749S342 757 420 729 526 661 550 601 682 575 749 533"/>
+    <path d="M-30 862C131 793 164 782 238 784S381 788 451 757 548 688 578 637 712 611 782 566"/>
+    <path d="M-2 889C133 830 206 812 265 818S391 814 477 786 573 724 612 678 734 650 811 608"/>
+    <path d="M836-20C807 149 911 210 909 353S908 481 832 582 814 760 838 935"/>
+    <path d="M867-20C838 143 942 212 941 352S940 492 862 589 847 762 870 935"/>
+    <path d="M900-20C870 155 973 216 975 364S969 503 894 600 880 778 907 935"/>
+  </g>
+  <g opacity=".15" stroke="#aa946e" stroke-width="1" stroke-dasharray="3 10"><path d="M120 70V833M390 70V833M660 70V833M930 70V833"/><path d="M80 115H1130M80 385H1130M80 655H1130"/></g>
+  <g id="water" class="map-landmark" data-landmark="water">
+    <path d="M981 177C1039 191 1119 241 1157 304S1204 443 1170 500 1135 620 1138 688L1015 685C1015 576 982 543 978 468S1004 355 966 302 943 218 981 177Z" fill="url(#water-fade)"/>
+    <path d="M997 199C1054 222 1119 264 1143 319S1175 432 1150 481 1124 584 1125 642L1036 642C1042 541 1004 515 1003 454S1029 350 993 307 973 239 997 199Z" fill="url(#water-hatch)"/>
+    <path d="M1000 223C1052 245 1106 279 1129 324M1022 547C1036 570 1047 595 1044 621" stroke="#648d97" stroke-width="1.5" stroke-dasharray="4 7" opacity=".55"/>
+    <text x="1054" y="446" fill="#55787f" font-family="Georgia,serif" font-style="italic" font-size="20" text-anchor="middle">Acessos aquáticos</text>
+    <text x="1060" y="473" fill="#55787f" font-family="Arial,sans-serif" font-size="13" text-anchor="middle" letter-spacing="1.5">ÁREA INTERPRETATIVA</text>
+  </g>
+  <!-- Cemetery footprints are indicative, not an exhaustive archaeological plan. -->
+  <g opacity=".56">
+    <g transform="translate(731 119)"><use href="#small-tomb" width="16" height="12"/><use href="#small-tomb" x="22" width="16" height="12"/><use href="#small-tomb" x="44" width="16" height="12"/><use href="#small-tomb" x="66" width="16" height="12"/><use href="#small-tomb" x="88" width="16" height="12"/><use href="#small-tomb" y="19" width="16" height="12"/><use href="#small-tomb" x="22" y="19" width="16" height="12"/><use href="#small-tomb" x="44" y="19" width="16" height="12"/><use href="#small-tomb" x="66" y="19" width="16" height="12"/><use href="#small-tomb" x="88" y="19" width="16" height="12"/><use href="#small-tomb" y="38" width="16" height="12"/><use href="#small-tomb" x="22" y="38" width="16" height="12"/><use href="#small-tomb" x="44" y="38" width="16" height="12"/><use href="#small-tomb" x="66" y="38" width="16" height="12"/><use href="#small-tomb" x="88" y="38" width="16" height="12"/></g>
+    <g transform="translate(438 137)"><use href="#small-tomb" width="18" height="11"/><use href="#small-tomb" x="26" width="18" height="11"/><use href="#small-tomb" x="52" width="18" height="11"/><use href="#small-tomb" y="18" width="18" height="11"/><use href="#small-tomb" x="26" y="18" width="18" height="11"/><use href="#small-tomb" x="52" y="18" width="18" height="11"/><use href="#small-tomb" y="36" width="18" height="11"/><use href="#small-tomb" x="26" y="36" width="18" height="11"/><use href="#small-tomb" x="52" y="36" width="18" height="11"/><use href="#small-tomb" y="54" width="18" height="11"/><use href="#small-tomb" x="26" y="54" width="18" height="11"/><use href="#small-tomb" x="52" y="54" width="18" height="11"/><use href="#small-tomb" y="72" width="18" height="11"/><use href="#small-tomb" x="26" y="72" width="18" height="11"/><use href="#small-tomb" x="52" y="72" width="18" height="11"/><use href="#small-tomb" y="90" width="18" height="11"/><use href="#small-tomb" x="26" y="90" width="18" height="11"/><use href="#small-tomb" x="52" y="90" width="18" height="11"/></g>
+    <g transform="translate(373 525)"><use href="#small-tomb" width="21" height="13"/><use href="#small-tomb" x="30" width="21" height="13"/><use href="#small-tomb" x="60" width="21" height="13"/><use href="#small-tomb" y="21" width="21" height="13"/><use href="#small-tomb" x="30" y="21" width="21" height="13"/><use href="#small-tomb" x="60" y="21" width="21" height="13"/></g>
+  </g>
+  <g id="khufu" class="map-landmark" data-landmark="khufu" filter="url(#pyramid-shadow)">
+    <path d="M554 131H696V273H554Z" fill="#c6b08b" stroke="#8c7552" stroke-width="1.5"/>
+    <path d="M554 131L625 202 696 131Z" fill="#dfca9e"/><path d="M696 131L625 202 696 273Z" fill="#b69c72"/><path d="M696 273L625 202 554 273Z" fill="#a98b63"/><path d="M554 273L625 202 554 131Z" fill="#ead9b4"/>
+    <path d="M554 131H696V273H554Z" fill="url(#masonry)"/>
+    <path d="M555 132L625 202 695 132M625 202V273" stroke="#8c7552" stroke-opacity=".4"/>
+  </g>
+  <path d="M711 184H727V235H711Z" fill="#bca681" stroke="#947b54"/><path d="M712 188H725M712 200H725M712 212H725M712 225H725" stroke="#e2d1ae"/>
+  <g fill="#ccb793" stroke="#947b54" stroke-width="1"><path d="M744 220L754 210 764 220 754 230Z"/><path d="M744 252L754 242 764 252 754 262Z"/><path d="M744 284L754 274 764 284 754 294Z"/></g>
+  <g id="khafre" class="map-landmark" data-landmark="khafre" filter="url(#pyramid-shadow)">
+    <path d="M365 337H499V471H365Z" fill="#c6b08b" stroke="#8c7552" stroke-width="1.5"/>
+    <path d="M365 337L432 404 499 337Z" fill="#deca9f"/><path d="M499 337L432 404 499 471Z" fill="#b69c72"/><path d="M499 471L432 404 365 471Z" fill="#a98b63"/><path d="M365 471L432 404 365 337Z" fill="#e8d6b0"/>
+    <path d="M365 337H499V471H365Z" fill="url(#masonry)"/>
+    <path d="M413 385L432 365 452 385 452 424 432 443 413 423Z" fill="#f0e5cb" opacity=".82"/><path d="M413 385L432 404 452 385M432 404L452 424M432 404L413 423" stroke="#bbab8a"/>
+  </g>
+  <g id="mortuary" class="map-landmark" data-landmark="mortuary">
+    <path d="M499 376H548V424H499Z" fill="#bfa680" stroke="#92744d" stroke-width="1.5"/>
+    <path d="M505 383H538V418H505Z" fill="#e5d6b7" stroke="#92744d"/><path d="M510 390H531V410H510Z" fill="#cab38d"/><path d="M540 392H557V407H540Z" fill="#c0a67f" stroke="#92744d"/>
+    <path d="M506 389H536M506 411H536" stroke="#92744d" stroke-width="3" stroke-dasharray="3 7"/>
+  </g>
+  <g id="causeway" class="map-landmark" data-landmark="causeway"><path d="M552 400L868 496" stroke="#ae9066" stroke-width="13"/><path d="M552 400L868 496" stroke="#e7d8b9" stroke-width="8"/><path d="M552 400L868 496" stroke="#9c7f56" stroke-width="1" stroke-dasharray="3 7"/></g>
+  <g id="menkaure" class="map-landmark" data-landmark="menkaure" filter="url(#pyramid-shadow)">
+    <path d="M258 607H326V675H258Z" fill="#c6b08b" stroke="#8c7552" stroke-width="1.5"/>
+    <path d="M258 607L292 641 326 607Z" fill="#dec89b"/><path d="M326 607L292 641 326 675Z" fill="#aa8c63"/><path d="M326 675L292 641 258 675Z" fill="#96764f"/><path d="M258 675L292 641 258 607Z" fill="#e3d0a7"/>
+    <path d="M258 607H326V675H258Z" fill="url(#masonry)"/>
+  </g>
+  <g fill="#c2ab83" stroke="#947a55"><path d="M335 627H370V655H335Z"/><path d="M263 694H285V716H263Z"/><path d="M292 694H314V716H292Z"/><path d="M321 694H343V716H321Z"/></g>
+  <g id="sphinx" class="map-landmark" data-landmark="sphinx">
+    <path d="M780 433H871V481H780Z" fill="#d5c09b" stroke="#b09a74"/>
+    <path d="M798 451C797 444 804 441 817 443L844 445 852 450 858 450V456H847V460H858V466L844 465 815 468C803 469 797 464 798 457Z" fill="#af8d5b" stroke="#876b46" stroke-width="1.5"/>
+    <path d="M837 445L839 434 849 434 853 445Z" fill="#b99764" stroke="#876b46"/>
+    <path d="M879 435H924V480H879Z" fill="#bba27c" stroke="#94764f" stroke-width="1.5"/><path d="M886 442H917V473H886Z" fill="#e3d2b0" stroke="#94764f"/><path d="M894 450H908V466H894Z" fill="#c3ab82"/>
+    <path d="M855 484H907V528H855Z" fill="#b49a74" stroke="#8c6f49" stroke-width="1.5"/><path d="M862 491H900V521H862Z" fill="#ded0b0" stroke="#8c6f49"/><path d="M868 499H894V507H868Z" fill="#bca481"/>
+  </g>
+  <!-- Heit el-Ghurab has a deliberately simplified, non-survey footprint. -->
+  <g id="settlement" class="map-landmark" data-landmark="settlement">
+    <path d="M839 671H998V827H839Z" fill="#dfceab" stroke="#a38c65" stroke-dasharray="3 5"/>
+    <path d="M849 679H987M849 681V718M849 734V810M895 679V714M895 732V813M938 679V716M938 735V813M979 680V814M849 716H984M849 734H985M849 775H985M849 813H984" stroke="#9b815b" stroke-width="5"/>
+    <path d="M855 692H889M855 704H889M901 692H931M901 704H931M945 692H973M945 704H973M860 741V769M872 741V769M883 741V769M902 742H931M902 755H931M948 741V769M959 741V769M970 741V769M855 786H888M902 788H932M947 788H971" stroke="#bca47d" stroke-width="3"/>
+    <path d="M832 650L998 651" stroke="#8c734e" stroke-width="6"/><path d="M832 650L998 651" stroke="#dbc8a1" stroke-width="2"/>
+  </g>
+  <g fill="#685d49" font-family="Georgia,serif" font-size="22" letter-spacing="1">
+    <text x="625" y="106" text-anchor="middle">QUÉOPS</text>
+    <text x="432" y="316" text-anchor="middle">QUÉFREN</text>
+    <text x="267" y="583" text-anchor="middle">MIQUERINOS</text>
+    <text x="845" y="420" text-anchor="middle" font-size="18">ESFINGE</text>
+    <text x="919" y="858" text-anchor="middle" font-size="18">HEIT EL-GHURAB</text>
+  </g>
+  <g fill="#7d6c51" font-family="Arial,sans-serif" font-size="13" letter-spacing="1.2"><text x="912" y="547" text-anchor="middle">TEMPLO DO VALE</text><text x="962" y="459">TEMPLO DA</text><text x="962" y="479">ESFINGE</text></g>
+  <g transform="translate(1058 98)" stroke="#6d634e" fill="#6d634e"><circle r="32" stroke-opacity=".3"/><path d="M0-43L7-8 0-16-7-8Z"/><path d="M0 37V-34M-24 0H24" stroke-width="1"/><path d="M0 17L-7 8 0 13 7 8Z" fill="none"/><text y="-53" stroke="none" text-anchor="middle" font-family="Georgia,serif" font-size="20">N</text><text y="55" stroke="none" text-anchor="middle" font-family="Arial,sans-serif" font-size="12">S</text><text x="-45" y="4" stroke="none" text-anchor="middle" font-family="Arial,sans-serif" font-size="12">O</text><text x="45" y="4" stroke="none" text-anchor="middle" font-family="Arial,sans-serif" font-size="12">L</text></g>
+  <g fill="#958065" font-family="Arial,sans-serif" font-size="12" letter-spacing="2"><text x="69" y="74">PLANALTO DE GIZÉ</text><text x="69" y="96">ESQUEMA HISTÓRICO • NORTE PARA CIMA</text><text x="69" y="856">VESTÍGIOS E POSIÇÕES RELATIVAS</text><text x="69" y="877">SEM ESCALA TOPOGRÁFICA</text></g>
+</svg>
